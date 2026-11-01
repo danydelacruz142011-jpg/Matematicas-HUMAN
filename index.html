@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackEA el Bachiller - Matematicas Human</title>
+    <style>
+        :root {
+            --theme-color: #2563eb; /* Azul por defecto (Álgebra) */
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 40px 60px;
+            position: relative;
+        }
+
+        /* Franjas laterales de color dinámico en los extremos */
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 12px;
+            background-color: var(--theme-color);
+            box-shadow: 0 0 20px var(--theme-color);
+            z-index: 100;
+        }
+
+        body::before { left: 0; }
+        body::after { right: 0; }
+
+        /* Contenedor del Logo en la esquina superior derecha */
+        .brand-logo-container {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            z-index: 101;
+        }
+
+        .brand-logo-container img {
+            width: 140px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--theme-color);
+        }
+
+        header {
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        h1.main-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--theme-color);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #94a3b8;
+        }
+
+        /* Secciones por Materia */
+        .subject-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .subject-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--theme-color);
+        }
+
+        /* Botones / Links a los PDFs */
+        .links-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .pdf-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #334155;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pdf-btn:hover {
+            background-color: var(--theme-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--theme-color);
+        }
+
+        /* Colores Específicos por Materia */
+        .subject-algebra { --theme-color: #2563eb; border-left: 6px solid #2563eb; } /* Azul */
+        .subject-trig { --theme-color: #d97706; border-left: 6px solid #d97706; }    /* Naranja */
+        .subject-geo { --theme-color: #059669; border-left: 6px solid #059669; }     /* Verde */
+        .subject-calc { --theme-color: #7c3aed; border-left: 6px solid #7c3aed; }    /* Púrpura */
+        .subject-prob { --theme-color: #dc2626; border-left: 6px solid #dc2626; }    /* Rojo */
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo personal en la esquina superior derecha -->
+    <div class="brand-logo-container">
+        <img src="watermarked_img_15706080702200980310.jpg" alt="Kaoz Logo Personal">
+    </div>
+
+    <header>
+        <h1 class="main-title">HackEA el Bachiller</h1>
+        <p class="intro-text">
+            En esta página web encontrarán todo el contenido referente a la disciplina de matemáticas a nivel bachillerato. Los temas que se van a tocar son álgebra, trigonometría, geometría analítica, cálculo, y probabilidad y estadística.
+        </p>
+    </header>
+
+    <main>
+        <!-- Álgebra (Azul) -->
+        <section class="subject-card subject-algebra">
+            <h2>Álgebra</h2>
+            <div class="links-group">
+                <a class="pdf-btn" href="El Gran Libro del Algebra Completo.pdf" target="_blank">Libro de Álgebra</a>
+                <a class="pdf-btn" href="Compendio 100 Ejercicios de Algebra.pdf" target="_blank">Ejercicios de Álgebra</a>
+            </div>
+        </section>
+
+        <!-- Trigonometría (Naranja) -->
+        <section class="subject-card subject-trig">
+            <h2>Trigonometría</h2>
+            <div class="links-group">
+                <a class="pdf-btn" href="El Gran Libro de Trigonometria.pdf" target="_blank">Libro de Trigonometría</a>
+                <a class="pdf-btn" href="Compendio 100 Ejercicios de Trigonometria.pdf" target="_blank">Ejercicios de Trigonometría</a>
+            </div>
+        </section>
+
+        <!-- Geometría Analítica (Verde) -->
+        <section class="subject-card subject-geo">
+            <h2>Geometría Analítica</h2>
+            <div class="links-group">
+                <a class="pdf-btn" href="El Gran Libro de Geometria Analitica.pdf" target="_blank">Libro de Geometría Analítica</a>
+                <a class="pdf-btn" href="Compendio 100 Ejercicios de Geometria Analitica.pdf" target="_blank">Ejercicios de Geometría Analítica</a>
+            </div>
+        </section>
+
+        <!-- Cálculo (Púrpura) -->
+        <section class="subject-card subject-calc">
+            <h2>Cálculo</h2>
+            <div class="links-group">
+                <a class="pdf-btn" href="El Gran Libro de Calculo.pdf" target="_blank">Libro de Cálculo</a>
+                <a class="pdf-btn" href="Compendio 100 Ejercicios de Calculo.pdf" target="_blank">Ejercicios de Cálculo</a>
+            </div>
+        </section>
+
+        <!-- Probabilidad y Estadística (Rojo) -->
+        <section class="subject-card subject-prob">
+            <h2>Probabilidad y Estadística</h2>
+            <div class="links-group">
+                <a class="pdf-btn" href="El Gran Libro de Probabilidad y Estadistica.pdf" target="_blank">Libro de Probabilidad</a>
+                <a class="pdf-btn" href="Compendio 100 Ejercicios de Probabilidad y Estadistica.pdf" target="_blank">Ejercicios de Probabilidad</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gracias por visitar esta página y recuerden que tengo más páginas de más materias.</p>
+    </footer>
+
+</body>
+</html>
